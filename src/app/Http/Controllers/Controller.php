@@ -2,12 +2,54 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function cache(string $key, $fallback)
+    {
+        $key .= ':q:' . request()->getQueryString();
+        $data = is_callable($fallback) ? $fallback() : $fallback;
+
+        if (!Redis::get($key)) {
+            if (!$this->isEmptyData($data)) {
+                $method = method_exists($data, 'getContent') ? 'getContent' : 'toJson';
+
+                Redis::set($key, $data->{$method}());
+
+                return json_decode(Redis::get($key));
+            }
+        }
+
+        return $data;
+    }
+
+    protected function isEmptyData($data): bool
+    {
+        if (!$data) {
+            return true;
+        }
+
+        if ($data instanceof ResourceCollection) {
+            return !$data->collection->count();
+        }
+
+        return false;
+    }
+
+    public function forget($key)
+    {
+        $keys = collect(Redis::keys("{$key}:*"))
+            ->map(fn ($key) => str_replace(config('cache.prefix'), '', $key))
+            ->toArray();
+
+        Redis::del($keys);
+    }
 }

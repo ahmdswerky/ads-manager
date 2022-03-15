@@ -1,5 +1,7 @@
 logs/*/*.log
 /mysql/*
+/redis/*
+/logs/*
 /logs/*/*
 !.gitignore
 /*.pdf
