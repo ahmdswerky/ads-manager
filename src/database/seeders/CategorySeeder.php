@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Advertisement;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
 
@@ -16,6 +17,7 @@ class CategorySeeder extends Seeder
     {
         Category::factory()
             ->count(10)
+            ->hasAdvertisements(30)
             ->create();
     }
 }
