@@ -11,19 +11,25 @@ A simple Ad-Manager managed with Docker.
   docker-compose build
 ```
 
-02.Copy .env file
+02.Install dependencies
+
+```bash
+  docker-compose composer install
+```
+
+03.Copy .env file
 
 ```bash
   docker-compose run --rm php php -r "file_exists('/var/www/html/.env') ?: copy('/var/www/html/.env.example', '/var/www/html/.env');"
 ```
 
-03.Generate Key
+04.Generate Key
 
 ```bash
   docker-compose run --rm artisan key:generate
 ```
 
-04.Run database migrations with seeders
+05.Run database migrations with seeders
 
 ```bash
   docker-compose run --rm artisan migrate --seed
