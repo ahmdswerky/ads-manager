@@ -19,7 +19,10 @@ class AdvertisementController extends Controller
     {
         $ads = Advertisement::filter($filters)->valid()->paginate();
 
-        return AdvertisementResource::collection($ads);
+        return $this->cache(
+            'ads:list',
+            response(['data' => AdvertisementResource::collection($ads)]),
+        );
     }
 
     /**
@@ -36,6 +39,8 @@ class AdvertisementController extends Controller
             $ad->tags()->attach($request->tags_ids);
         }
 
+        $this->forget('ads');
+
         return response([
             'ad' => new AdvertisementResource($ad),
         ], 201);
@@ -49,8 +54,13 @@ class AdvertisementController extends Controller
      */
     public function show(Advertisement $advertisement)
     {
+        $ad = $this->cache(
+            'ads:show:' . $advertisement->id,
+            new AdvertisementResource($advertisement),
+        );
+
         return response([
-            'ad' => new AdvertisementResource($advertisement),
+            'ad' => $ad,
         ]);
     }
 
@@ -68,6 +78,8 @@ class AdvertisementController extends Controller
         if ($request->has('tags_ids')) {
             $advertisement->tags()->sync($request->tags_ids);
         }
+
+        $this->forget('ads');
 
         return response([
             'ad' => new AdvertisementResource($advertisement->fresh()),
