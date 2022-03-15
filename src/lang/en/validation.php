@@ -130,6 +130,9 @@ return [
     'url' => 'The :attribute must be a valid URL.',
     'uuid' => 'The :attribute must be a valid UUID.',
 
+    'max_words' => 'The :attribute must not be greater than :max words.',
+    'category_limit' => 'The selected :attribute already has a category.',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -158,6 +161,8 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'advertisement_id' => 'advertisement',
+    ],
 
 ];
