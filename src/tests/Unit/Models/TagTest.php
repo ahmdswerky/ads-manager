@@ -2,7 +2,7 @@
 
 use App\Models\Tag;
 
-test('can create tags', function () {
+test('creates a tags', function () {
     $name = 'created';
     $tag = Tag::create(compact('name'));
 
