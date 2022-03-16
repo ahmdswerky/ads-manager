@@ -69,7 +69,8 @@ class Advertisement extends Model
     protected function excerpt(): Attribute
     {
         return new Attribute(
-            get: fn () => Str::limit($this->description, 150, '...'),
+            get: fn () => strlen($this->description) > 150 ?
+                Str::limit($this->description, 150, '...') : $this->description,
         );
     }
 }
