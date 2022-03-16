@@ -91,6 +91,8 @@ Run tests
 
 [Postman Collection](https://documenter.getpostman.com/view/5216161/UVsLSmhX)
 
+OR [Download and start using the collection from here](./resources/Ads-Manager.postman_collection-2022-03-16.json)
+
 ### Filters
 
 ### Get advertiser's ads

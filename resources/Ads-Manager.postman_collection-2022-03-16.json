@@ -1,0 +1,3000 @@
+{
+	"info": {
+		"_postman_id": "575f8871-a475-4e7b-9f6f-f43c52c5808a",
+		"name": "Ads Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ads",
+			"item": [
+				{
+					"name": "ads (list)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/ads?category=9",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"ads"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "est,molestiae, odit",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:6007/api/ads",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6007",
+									"path": [
+										"api",
+										"ads"
+									],
+									"query": [
+										{
+											"key": "user",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:23:18 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 9,\n            \"title\": \"Updated\",\n            \"description\": \"Lorem ipsum.\",\n            \"type\": \"free\",\n            \"category\": null,\n            \"tags\": [],\n            \"created_at\": \"2022-03-15T04:12:58.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"New Ad\",\n            \"description\": \"Lorem ipsum dolor.\",\n            \"type\": \"paid\",\n            \"category\": null,\n            \"tags\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"est\",\n                    \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n                },\n                {\n                    \"id\": 3,\n                    \"name\": \"sint\",\n                    \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n                },\n                {\n                    \"id\": 10,\n                    \"name\": \"sit\",\n                    \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T04:16:40.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:6049/api/ads?page=1\",\n        \"last\": \"http://localhost:6049/api/ads?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:6049/api/ads?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:6049/api/ads\",\n        \"per_page\": 15,\n        \"to\": 2,\n        \"total\": 2\n    }\n}"
+						},
+						{
+							"name": "200 OK (user filter)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/ads?user=2",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads"
+									],
+									"query": [
+										{
+											"key": "user",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:18:01 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 7,\n            \"title\": \"Test Ad\",\n            \"description\": \"Lorem ipsum dolor.\",\n            \"type\": \"paid\",\n            \"category\": null,\n            \"tags\": [\n                {\n                    \"id\": 5,\n                    \"name\": \"ab\",\n                    \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T04:02:36.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Updated\",\n            \"description\": \"Lorem ipsum.\",\n            \"type\": \"free\",\n            \"category\": null,\n            \"tags\": [],\n            \"created_at\": \"2022-03-15T04:12:58.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Updated\",\n            \"description\": \"Lorem ipsum.\",\n            \"type\": \"free\",\n            \"category\": null,\n            \"tags\": [],\n            \"created_at\": \"2022-03-15T04:16:40.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:6049/api/ads?page=1\",\n        \"last\": \"http://localhost:6049/api/ads?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:6049/api/ads?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:6049/api/ads\",\n        \"per_page\": 15,\n        \"to\": 3,\n        \"total\": 3\n    }\n}"
+						},
+						{
+							"name": "200 OK (tags filter)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/ads?tags=est,molestiae, odit",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads"
+									],
+									"query": [
+										{
+											"key": "user",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "tags",
+											"value": "est,molestiae, odit"
+										},
+										{
+											"key": "tags[0]",
+											"value": "et",
+											"disabled": true
+										},
+										{
+											"key": "tags[1]",
+											"value": "molestiae",
+											"disabled": true
+										},
+										{
+											"key": "tags[2]",
+											"value": "odit",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:36:50 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 10,\n            \"title\": \"New Ad\",\n            \"description\": \"Lorem ipsum dolor.\",\n            \"type\": \"paid\",\n            \"category\": {\n                \"id\": 2,\n                \"name\": \"Loremer\",\n                \"created_at\": \"2022-03-15T04:27:02.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 2,\n                    \"name\": \"est\",\n                    \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n                },\n                {\n                    \"id\": 3,\n                    \"name\": \"sint\",\n                    \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n                },\n                {\n                    \"id\": 10,\n                    \"name\": \"sit\",\n                    \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T04:16:40.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:6049/api/ads?page=1\",\n        \"last\": \"http://localhost:6049/api/ads?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:6049/api/ads?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:6049/api/ads\",\n        \"per_page\": 15,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						},
+						{
+							"name": "200 OK (category filter)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/ads?category=9",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads"
+									],
+									"query": [
+										{
+											"key": "user",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "tags",
+											"value": "est,molestiae, odit",
+											"disabled": true
+										},
+										{
+											"key": "tags[0]",
+											"value": "et",
+											"disabled": true
+										},
+										{
+											"key": "tags[1]",
+											"value": "molestiae",
+											"disabled": true
+										},
+										{
+											"key": "tags[2]",
+											"value": "odit",
+											"disabled": true
+										},
+										{
+											"key": "category",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:34:01 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 244,\n            \"title\": \"I hadn't mentioned Dinah!' she said to one of.\",\n            \"description\": \"Dodo, 'the best way to fly up into hers--she could hear him sighing as if he had never heard before, 'Sure then I'm here! Digging for apples, indeed!' said the Queen, stamping on the ground near the right thing to eat her up in spite of all her life. Indeed, she had not long to doubt, for the moment he was going off into a butterfly, I should say \\\"With what porpoise?\\\"' 'Don't you mean by that?' said the Hatter: 'it's very rude.' The Hatter shook his head contemptuously. 'I dare say you're wondering why I don't remember where.' 'Well, it must be kind to them,' thought Alice, 'or perhaps they won't walk the way YOU manage?' Alice asked. 'We called him Tortoise because he was speaking, so that it was YOUR table,' said Alice; 'that's not at all the first position in dancing.' Alice said.\",\n            \"type\": \"free\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 14,\n                    \"name\": \"esse\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 17,\n                    \"name\": \"autem\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 27,\n                    \"name\": \"quidem\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 40,\n                    \"name\": \"dolor\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 245,\n            \"title\": \"Bill, I fancy--Who's to go nearer till she heard.\",\n            \"description\": \"Mock Turtle said: 'no wise fish would go anywhere without a moment's delay would cost them their lives. All the time she saw in another moment it was certainly not becoming. 'And that's the queerest thing about it.' (The jury all wrote down all three to settle the question, and they sat down and cried. 'Come, there's half my plan done now! How puzzling all these changes are! I'm never sure what I'm going to begin with,' the Mock Turtle would be grand, certainly,' said Alice, looking down at her feet in the world she was small enough to get an opportunity of adding, 'You're looking for eggs, as it happens; and if I only wish people knew that: then they both bowed low, and their curls got entangled together. Alice was beginning to end,' said the Hatter went on, 'and most things twinkled.\",\n            \"type\": \"paid\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 6,\n                    \"name\": \"enim\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 12,\n                    \"name\": \"quisquam\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 26,\n                    \"name\": \"vel\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 35,\n                    \"name\": \"rerum\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 246,\n            \"title\": \"Queen will hear you! You see, she came upon a.\",\n            \"description\": \"Alice. 'What IS the use of repeating all that green stuff be?' said Alice. 'Oh, don't talk about her any more HERE.' 'But then,' thought she, 'what would become of you? I gave her answer. 'They're done with blacking, I believe.' 'Boots and shoes under the hedge. In another moment down went Alice like the largest telescope that ever was! Good-bye, feet!' (for when she caught it, and fortunately was just in time to go, for the White Rabbit returning, splendidly dressed, with a teacup in one hand and a great many teeth, so she helped herself to some tea and bread-and-butter, and went back to finish his story. CHAPTER IV. The Rabbit Sends in a great hurry; 'and their names were Elsie, Lacie, and Tillie; and they lived at the Lizard as she could have been a holiday?' 'Of course not,' said the.\",\n            \"type\": \"free\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 14,\n                    \"name\": \"esse\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 15,\n                    \"name\": \"sapiente\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 35,\n                    \"name\": \"rerum\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 38,\n                    \"name\": \"molestias\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 247,\n            \"title\": \"Dormouse; '--well in.' This answer so confused.\",\n            \"description\": \"IS a long tail, certainly,' said Alice, always ready to ask them what the name 'Alice!' CHAPTER XII. Alice's Evidence 'Here!' cried Alice, jumping up in great disgust, and walked a little of her voice, and the other end of the jurors were writing down 'stupid things!' on their slates, and she thought it must make me larger, it must be a footman in livery, with a yelp of delight, which changed into alarm in another moment down went Alice like the look of the jury had a vague sort of present!' thought Alice. 'Now we shall have to whisper a hint to Time, and round Alice, every now and then a great letter, nearly as she went hunting about, and called out, 'First witness!' The first question of course was, how to set about it; if I'm Mabel, I'll stay down here! It'll be no chance of this, so.\",\n            \"type\": \"paid\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 8,\n                    \"name\": \"rerum\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 9,\n                    \"name\": \"consequatur\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 11,\n                    \"name\": \"nulla\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 12,\n                    \"name\": \"quisquam\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 249,\n            \"title\": \"Alice, very much what would be QUITE as much as.\",\n            \"description\": \"I know is, it would feel with all their simple joys, remembering her own children. 'How should I know?' said Alice, who was beginning to end,' said the Gryphon. 'I mean, what makes them sour--and camomile that makes the matter worse. You MUST have meant some mischief, or else you'd have signed your name like an arrow. The Cat's head with great emphasis, looking hard at Alice the moment she appeared on the ground near the house down!' said the Gryphon hastily. 'Go on with the edge of the sort,' said the March Hare went 'Sh! sh!' and the great puzzle!' And she kept on puzzling about it while the Dodo in an offended tone, 'was, that the mouse doesn't get out.\\\" Only I don't put my arm round your waist,' the Duchess began in a deep, hollow tone: 'sit down, both of you, and listen to her. 'I.\",\n            \"type\": \"free\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 13,\n                    \"name\": \"fugit\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 25,\n                    \"name\": \"animi\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 29,\n                    \"name\": \"ut\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 31,\n                    \"name\": \"voluptas\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 251,\n            \"title\": \"Alice. 'Did you say things are worse than ever,'.\",\n            \"description\": \"I suppose it were white, but there was silence for some minutes. Alice thought she might find another key on it, or at least one of the well, and noticed that they must be growing small again.' She got up and beg for its dinner, and all would change to tinkling sheep-bells, and the Queen shouted at the top of its mouth and began to tremble. Alice looked at poor Alice, that she had hoped) a fan and gloves--that is, if I chose,' the Duchess replied, in a low, timid voice, 'If you can't take LESS,' said the Cat, as soon as look at it!' This speech caused a remarkable sensation among the branches, and every now and then hurried on, Alice started to her that she might as well as she heard something splashing about in the other. 'I beg your pardon!' said the Mock Turtle recovered his voice.\",\n            \"type\": \"paid\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 24,\n                    \"name\": \"eaque\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 25,\n                    \"name\": \"animi\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 36,\n                    \"name\": \"enim\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 38,\n                    \"name\": \"molestias\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 254,\n            \"title\": \"Go on!' 'I'm a poor man, your Majesty,' said.\",\n            \"description\": \"IS the fun?' said Alice. 'That's the reason they're called lessons,' the Gryphon replied rather crossly: 'of course you don't!' the Hatter went on eagerly. 'That's enough about lessons,' the Gryphon never learnt it.' 'Hadn't time,' said the King had said that day. 'That PROVES his guilt,' said the Hatter, 'I cut some more tea,' the Hatter asked triumphantly. Alice did not see anything that looked like the right word) '--but I shall ever see you again, you dear old thing!' said the Duchess, it had been. But her sister was reading, but it just now.' 'It's the oldest rule in the shade: however, the moment she appeared; but she saw them, they were IN the well,' Alice said to herself, being rather proud of it: for she had hurt the poor little thing sobbed again (or grunted, it was good.\",\n            \"type\": \"paid\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"voluptatem\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 11,\n                    \"name\": \"nulla\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 24,\n                    \"name\": \"eaque\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 31,\n                    \"name\": \"voluptas\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 256,\n            \"title\": \"Duchess, 'and that's the queerest thing about.\",\n            \"description\": \"She'll get me executed, as sure as ferrets are ferrets! Where CAN I have ordered'; and she did not get hold of this elegant thimble'; and, when it grunted again, and all that,' he said to a shriek, 'and just as she went on, 'What's your name, child?' 'My name is Alice, so please your Majesty!' the soldiers did. After these came the royal children; there were no tears. 'If you're going to remark myself.' 'Have you seen the Mock Turtle. 'Very much indeed,' said Alice. 'Why, you don't explain it as you can--' 'Swim after them!' screamed the Pigeon. 'I can see you're trying to explain it is to do THAT in a low trembling voice, '--and I hadn't quite finished my tea when I grow up, I'll write one--but I'm grown up now,' she added aloud. 'Do you take me for asking! No, it'll never do to ask.\",\n            \"type\": \"paid\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 6,\n                    \"name\": \"enim\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 11,\n                    \"name\": \"nulla\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 29,\n                    \"name\": \"ut\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 39,\n                    \"name\": \"a\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 257,\n            \"title\": \"Gryphon repeated impatiently: 'it begins \\\"I.\",\n            \"description\": \"Dormouse said--' the Hatter said, tossing his head sadly. 'Do I look like one, but it was good manners for her neck would bend about easily in any direction, like a tunnel for some time after the candle is like after the rest of the cakes, and was immediately suppressed by the pope, was soon submitted to by all three to settle the question, and they all looked puzzled.) 'He must have been changed for any lesson-books!' And so she sat down in a whisper.) 'That would be grand, certainly,' said Alice, feeling very glad to find any. And yet I wish I hadn't cried so much!' Alas! it was only too glad to do next, when suddenly a White Rabbit interrupted: 'UNimportant, your Majesty means, of course,' the Dodo could not stand, and she had been would have called him Tortoise because he taught us,'.\",\n            \"type\": \"free\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 7,\n                    \"name\": \"sit\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 24,\n                    \"name\": \"eaque\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 26,\n                    \"name\": \"vel\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 36,\n                    \"name\": \"enim\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 259,\n            \"title\": \"The Cat's head with great emphasis, looking hard.\",\n            \"description\": \"Caterpillar. 'I'm afraid I am, sir,' said Alice; 'that's not at all for any lesson-books!' And so it was the White Rabbit blew three blasts on the floor, and a long and a large mushroom growing near her, about four inches deep and reaching half down the chimney as she could. 'The Dormouse is asleep again,' said the March Hare meekly replied. 'Yes, but I don't keep the same size: to be sure, this generally happens when one eats cake, but Alice had no reason to be two people. 'But it's no use in saying anything more till the Pigeon in a deep voice, 'are done with a T!' said the Duchess, as she spoke. 'I must be the best way to hear it say, as it spoke (it was Bill, I fancy--Who's to go on till you come to the Gryphon. Alice did not quite know what a dear quiet thing,' Alice went on.\",\n            \"type\": \"free\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 4,\n                    \"name\": \"sit\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 25,\n                    \"name\": \"animi\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 34,\n                    \"name\": \"ipsa\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 40,\n                    \"name\": \"dolor\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 262,\n            \"title\": \"Dormouse went on, 'and most things twinkled.\",\n            \"description\": \"I'll get into that lovely garden. First, however, she again heard a voice outside, and stopped to listen. 'Mary Ann! Mary Ann!' said the King: 'however, it may kiss my hand if it had some kind of sob, 'I've tried the effect of lying down on one of them.' In another minute there was no longer to be no doubt that it was a large pigeon had flown into her face, and was going on rather better now,' she said, 'and see whether it's marked \\\"poison\\\" or not'; for she was talking. Alice could only hear whispers now and then she had looked under it, and very angrily. 'A knot!' said Alice, in a game of croquet she was always ready to make personal remarks,' Alice said nothing; she had never before seen a good deal frightened by this time, sat down at her as she could. 'The Dormouse is asleep again,'.\",\n            \"type\": \"free\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 11,\n                    \"name\": \"nulla\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 23,\n                    \"name\": \"repudiandae\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 33,\n                    \"name\": \"molestiae\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 39,\n                    \"name\": \"a\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 263,\n            \"title\": \"Caterpillar. 'Is that the cause of this remark.\",\n            \"description\": \"Tortoise, if he were trying which word sounded best. Some of the jurymen. 'It isn't directed at all,' said the Pigeon; 'but if they do, why then they're a kind of sob, 'I've tried every way, and then dipped suddenly down, so suddenly that Alice quite hungry to look down and cried. 'Come, there's half my plan done now! How puzzling all these changes are! I'm never sure what I'm going to say,' said the Cat. 'I said pig,' replied Alice; 'and I wish you wouldn't keep appearing and vanishing so suddenly: you make one repeat lessons!' thought Alice; 'I must be a lesson to you to offer it,' said Alice indignantly. 'Let me alone!' 'Serpent, I say again!' repeated the Pigeon, raising its voice to a mouse, you know. But do cats eat bats?' and sometimes, 'Do bats eat cats?' for, you see, Alice had.\",\n            \"type\": \"paid\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 6,\n                    \"name\": \"enim\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 16,\n                    \"name\": \"nesciunt\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 34,\n                    \"name\": \"ipsa\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 35,\n                    \"name\": \"rerum\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 264,\n            \"title\": \"Mary Ann, what ARE you doing out here? Run home.\",\n            \"description\": \"Alice, 'it would be the right height to be.' 'It is a very truthful child; 'but little girls eat eggs quite as safe to stay in here any longer!' She waited for some time after the others. 'Are their heads down! I am so VERY wide, but she had expected: before she got back to them, and the game was going to say,' said the Cat; and this was her turn or not. 'Oh, PLEASE mind what you're at!\\\" You know the way YOU manage?' Alice asked. The Hatter looked at Alice. 'I'M not a mile high,' said Alice. 'It must be a person of authority over Alice. 'Stand up and to hear her try and say \\\"Who am I to get to,' said the Hatter, and, just as if his heart would break. She pitied him deeply. 'What is it?' The Gryphon sat up and said, 'It was the White Rabbit, who said in a hoarse, feeble voice: 'I heard.\",\n            \"type\": \"paid\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 18,\n                    \"name\": \"nulla\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 32,\n                    \"name\": \"omnis\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 34,\n                    \"name\": \"ipsa\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 36,\n                    \"name\": \"enim\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 266,\n            \"title\": \"Alice recognised the White Rabbit was still in.\",\n            \"description\": \"Tell us all about for some time in silence: at last it unfolded its arms, took the hookah out of the what?' said the Caterpillar; and it was only sobbing,' she thought, and it set to work very diligently to write out a history of the month, and doesn't tell what o'clock it is!' As she said to herself, for she was quite a crowd of little birds and animals that had fluttered down from the Gryphon, and all would change to dull reality--the grass would be as well as she ran. 'How surprised he'll be when he pleases!' CHORUS. 'Wow! wow! wow!' While the Duchess said after a minute or two sobs choked his voice. 'Same as if his heart would break. She pitied him deeply. 'What is it?' he said. 'Fifteenth,' said the Hatter. 'You might just as she could, 'If you didn't sign it,' said the Gryphon. 'Do.\",\n            \"type\": \"free\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 10,\n                    \"name\": \"vel\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 30,\n                    \"name\": \"ut\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 31,\n                    \"name\": \"voluptas\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 35,\n                    \"name\": \"rerum\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        },\n        {\n            \"id\": 269,\n            \"title\": \"But she did not like the tone of the miserable.\",\n            \"description\": \"The Mouse did not like the Mock Turtle, capering wildly about. 'Change lobsters again!' yelled the Gryphon went on planning to herself how she would have done just as usual. 'Come, there's half my plan done now! How puzzling all these strange Adventures of hers that you had been wandering, when a sharp hiss made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be so stingy about it, you may nurse it a little startled when she looked at each other for some time with one elbow against the ceiling, and had been found and handed them round as prizes. There was no more of the officers: but the wise little Alice was so small as this is May it won't be raving mad--at least not so mad as it can't possibly make me larger, it must make me smaller, I can go back.\",\n            \"type\": \"free\",\n            \"category\": {\n                \"id\": 9,\n                \"name\": \"Alice, a.\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            \"tags\": [\n                {\n                    \"id\": 19,\n                    \"name\": \"dolores\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 21,\n                    \"name\": \"nobis\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 29,\n                    \"name\": \"ut\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                },\n                {\n                    \"id\": 31,\n                    \"name\": \"voluptas\",\n                    \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n                }\n            ],\n            \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:6049/api/ads?page=1\",\n        \"last\": \"http://localhost:6049/api/ads?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:6049/api/ads?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:6049/api/ads\",\n        \"per_page\": 15,\n        \"to\": 15,\n        \"total\": 15\n    }\n}"
+						},
+						{
+							"name": "200 OK (tags filter no results)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/ads?tags=molestiae",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads"
+									],
+									"query": [
+										{
+											"key": "user",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "tags",
+											"value": "molestiae"
+										},
+										{
+											"key": "tags[0]",
+											"value": "et",
+											"disabled": true
+										},
+										{
+											"key": "tags[1]",
+											"value": "molestiae",
+											"disabled": true
+										},
+										{
+											"key": "tags[2]",
+											"value": "odit",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:37:25 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [],\n    \"links\": {\n        \"first\": \"http://localhost:6049/api/ads?page=1\",\n        \"last\": \"http://localhost:6049/api/ads?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": null,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:6049/api/ads?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:6049/api/ads\",\n        \"per_page\": 15,\n        \"to\": null,\n        \"total\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "ads (show)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/ads/:id",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"ads",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/ads/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:27:48 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ad\": {\n        \"id\": 30,\n        \"title\": \"I think you'd take a fancy to herself how she.\",\n        \"description\": \"Alice severely. 'What are they doing?' Alice whispered to the jury. They were just beginning to think to herself, rather sharply; 'I advise you to get through the doorway; 'and even if my head would go round and round Alice, every now and then, 'we went to the Hatter. 'You might just as if it please your Majesty,' said the King, and he says it's so useful, it's worth a hundred pounds! He says it kills all the unjust things--' when his eye chanced to fall upon Alice, as she had peeped into the jury-box, or they would call after her: the last time she had put on his spectacles and looked at each other for some minutes. The Caterpillar and Alice heard the Rabbit whispered in reply, 'for fear they should forget them before the officer could get to the executioner: 'fetch her here.' And the.\",\n        \"type\": \"paid\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"ONE with.\",\n            \"created_at\": \"2022-03-15T06:26:03.000000Z\"\n        },\n        \"tags\": [\n            {\n                \"id\": 16,\n                \"name\": \"nesciunt\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            {\n                \"id\": 19,\n                \"name\": \"dolores\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            {\n                \"id\": 20,\n                \"name\": \"aut\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            },\n            {\n                \"id\": 38,\n                \"name\": \"molestias\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            }\n        ],\n        \"created_at\": \"2022-03-15T06:26:04.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/ads/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "90"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:29:47 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\Advertisement] 90\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php\",\n    \"line\": 355,\n    \"trace\": [\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php\",\n            \"line\": 331,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 185,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 126,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 102,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 54,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 727,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 702,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 666,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 655,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/public/index.php\",\n            \"line\": 52,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "ads (create)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Test Ad",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor.",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "paid",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-03-15 08:02am",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "tags_ids[0]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "tags_ids[1]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "tags_ids[2]",
+									"value": "9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api}}/ads",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"ads"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Test Ad",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor.",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "paid",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-03-15 08:02am",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "tags_ids[0]",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[1]",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "tags_ids[2]",
+											"value": "9",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/ads",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:28:41 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ad\": {\n        \"id\": 301,\n        \"title\": \"Test Ad\",\n        \"description\": \"Lorem ipsum dolor.\",\n        \"type\": \"paid\",\n        \"category\": {\n            \"id\": 3,\n            \"name\": \"HAD THIS.\",\n            \"created_at\": \"2022-03-15T06:26:04.000000Z\"\n        },\n        \"tags\": [\n            {\n                \"id\": 5,\n                \"name\": \"nam\",\n                \"created_at\": \"2022-03-15T06:26:05.000000Z\"\n            }\n        ],\n        \"created_at\": \"2022-03-15T06:28:41.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "422 Validation (required all)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Test Ad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "paid",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "user_id",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "start_date",
+											"value": "2022-03-15 08:02am",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "category_id",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[0]",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[1]",
+											"value": "5",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[2]",
+											"value": "9",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/ads",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:29:11 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The title field is required. (and 5 more errors)\",\n    \"errors\": {\n        \"title\": [\n            \"The title field is required.\"\n        ],\n        \"description\": [\n            \"The description field is required.\"\n        ],\n        \"type\": [\n            \"The type field is required.\"\n        ],\n        \"user_id\": [\n            \"The user id field is required.\"\n        ],\n        \"category_id\": [\n            \"The category id field is required.\"\n        ],\n        \"start_date\": [\n            \"The start date field is required.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "ads (update)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "New Ad",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor.",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "free",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-03-15 06:02am",
+									"type": "text"
+								},
+								{
+									"key": "tags_ids[0]",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tags_ids[1]",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tags_ids[2]",
+									"value": "10",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api}}/ads/:id",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"ads",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK (clearing tags)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Updated",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum.",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "free",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-03-15 04:02am",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/ads/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:17:02 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "46"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ad\": {\n        \"id\": 10,\n        \"title\": \"Updated\",\n        \"description\": \"Lorem ipsum.\",\n        \"type\": \"free\",\n        \"category\": {\n            \"id\": 3,\n            \"name\": \"HAD THIS.\",\n            \"created_at\": \"2022-03-15T06:26:04.000000Z\"\n        },\n        \"tags\": [],\n        \"created_at\": \"2022-03-15T04:16:40.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "200 OK (updating tags)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Updated",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum.",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "free",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-03-15 04:02am",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "category_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/ads/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:19:12 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ad\": {\n        \"id\": 10,\n        \"title\": \"Updated\",\n        \"description\": \"Lorem ipsum.\",\n        \"type\": \"free\",\n        \"category\": {\n            \"id\": 3,\n            \"name\": \"HAD THIS.\",\n            \"created_at\": \"2022-03-15T06:26:04.000000Z\"\n        },\n        \"tags\": [\n            {\n                \"id\": 2,\n                \"name\": \"est\",\n                \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"sint\",\n                \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n            },\n            {\n                \"id\": 10,\n                \"name\": \"sit\",\n                \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n            }\n        ],\n        \"created_at\": \"2022-03-15T04:16:40.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "200 OK (with old tags)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "New Ad",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor.",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "paid",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-03-15 04:02am",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/ads/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:20:04 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ad\": {\n        \"id\": 10,\n        \"title\": \"New Ad\",\n        \"description\": \"Lorem ipsum dolor.\",\n        \"type\": \"paid\",\n        \"category\": {\n            \"id\": 3,\n            \"name\": \"HAD THIS.\",\n            \"created_at\": \"2022-03-15T06:26:04.000000Z\"\n        },\n        \"tags\": [\n            {\n                \"id\": 2,\n                \"name\": \"est\",\n                \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"sint\",\n                \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n            },\n            {\n                \"id\": 10,\n                \"name\": \"sit\",\n                \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n            }\n        ],\n        \"created_at\": \"2022-03-15T04:16:40.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "422 Validation (invalid enum)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "New Ad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "invalid",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2022-03-15 04:02am",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/ads/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:25:22 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The selected type is invalid.\",\n    \"errors\": {\n        \"type\": [\n            \"The selected type is invalid.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "422 Validation (invalid start_date)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "New Ad",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "Lorem ipsum dolor.",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "free",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "start_date",
+											"value": "2022-03-15 04:02am",
+											"type": "text"
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tags_ids[]",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/ads/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:26:00 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The start date must be a date after or equal to now.\",\n    \"errors\": {\n        \"start_date\": [\n            \"The start date must be a date after or equal to now.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "ads (delete)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/ads/:id",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"ads",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "204 No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/ads/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"ads",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:22:58 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "categories (list)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/categories",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/categories",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 05:59:29 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Don't be.\",\n            \"created_at\": \"2022-03-15T05:58:39.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Queen of.\",\n            \"created_at\": \"2022-03-15T05:58:40.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Alice to.\",\n            \"created_at\": \"2022-03-15T05:58:40.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Off with.\",\n            \"created_at\": \"2022-03-15T05:58:40.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Involved.\",\n            \"created_at\": \"2022-03-15T05:58:40.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"When the.\",\n            \"created_at\": \"2022-03-15T05:58:40.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"I almost.\",\n            \"created_at\": \"2022-03-15T05:58:40.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"T!' said.\",\n            \"created_at\": \"2022-03-15T05:58:40.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Sends in.\",\n            \"created_at\": \"2022-03-15T05:58:41.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"I!' said.\",\n            \"created_at\": \"2022-03-15T05:58:41.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:6049/api/categories?page=1\",\n        \"last\": \"http://localhost:6049/api/categories?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:6049/api/categories?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:6049/api/categories\",\n        \"per_page\": 15,\n        \"to\": 10,\n        \"total\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "categories (show)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/categories/:id",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/categories/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:02:03 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"category\": {\n        \"id\": 1,\n        \"name\": \"Don't be.\",\n        \"created_at\": \"2022-03-15T05:58:39.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "categories (create)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lorem",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api}}/categories",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Lorem",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/categories",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:02:23 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"category\": {\n        \"id\": 11,\n        \"name\": \"Lorem\",\n        \"created_at\": \"2022-03-15T06:02:23.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "categories (update)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Updated",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api}}/categories/:id",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Updated",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/categories/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:03:47 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"category\": {\n        \"id\": 5,\n        \"name\": \"Updated\",\n        \"created_at\": \"2022-03-15T05:58:40.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "categories (delete)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/categories/:id",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "403 Forbidden (attached to ads)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/categories/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:04:27 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"This category is attached to advertisements.\"\n}"
+						},
+						{
+							"name": "204 No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/categories/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:06:06 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "tags",
+			"item": [
+				{
+					"name": "tags (list)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/tags",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/tags",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"tags"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Mar 2022 23:57:58 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"consectetur\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"non\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"molestiae\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"odit\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"enim\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"consequuntur\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"et\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"sit\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"dolorem\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"commodi\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"repellat\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"sint\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"aut\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"dolor\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"nobis\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:6049/api/tags?page=1\",\n        \"last\": \"http://localhost:6049/api/tags?page=3\",\n        \"prev\": null,\n        \"next\": \"http://localhost:6049/api/tags?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 3,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:6049/api/tags?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:6049/api/tags?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:6049/api/tags?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:6049/api/tags?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:6049/api/tags\",\n        \"per_page\": 15,\n        \"to\": 15,\n        \"total\": 40\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "tags (show)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/tags/:id",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"tags",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/tags/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"tags",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:30:29 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "{\n    \"tag\": {\n        \"id\": 2,\n        \"name\": \"est\",\n        \"created_at\": \"2022-03-15T01:57:18.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "404 Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/tags/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"tags",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "200"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 04:30:41 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\Tag] 200\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php\",\n    \"line\": 355,\n    \"trace\": [\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php\",\n            \"line\": 331,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 185,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 126,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 102,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php\",\n            \"line\": 54,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 727,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 702,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 666,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Routing/Router.php\",\n            \"line\": 655,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"/var/www/html/public/index.php\",\n            \"line\": 52,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "tags (create)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "tech",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api}}/tags",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "tech",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/tags",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"tags"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:00:20 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"tag\": {\n        \"id\": 41,\n        \"name\": \"tech\",\n        \"created_at\": \"2022-03-15T06:00:20.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "422 Validation (required)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{api}}/tags",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"tags"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Mar 2022 23:59:02 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The name field is required.\",\n    \"errors\": {\n        \"name\": [\n            \"The name field is required.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "422 Validation (unique)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "consectetur",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/tags",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"tags"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 00:00:07 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The name has already been taken.\",\n    \"errors\": {\n        \"name\": [\n            \"The name has already been taken.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "tags (update)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "updated",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api}}/tags/:id",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"tags",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "updated",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{api}}/tags/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"tags",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 06:00:45 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"tag\": {\n        \"id\": 1,\n        \"name\": \"updated\",\n        \"created_at\": \"2022-03-15T05:58:41.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "tags (delete)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/tags/:id",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"tags",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "204 No Content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{api}}/tags/:id",
+									"host": [
+										"{{api}}"
+									],
+									"path": [
+										"tags",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.20.2"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Mar 2022 00:03:38 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.addHeader('Accept: application/json');"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "http://localhost:6007/api",
+			"type": "string"
+		}
+	]
+}
