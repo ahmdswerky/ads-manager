@@ -21,7 +21,7 @@ return new class extends Migration {
             $table->text('description');
             $table->foreignIdFor(User::class)->constrained();
             $table->foreignIdFor(Category::class)->constrained();
-            $table->dateTime('start_date');
+            $table->dateTime('start_date')->index();
             $table->timestamps();
         });
     }
