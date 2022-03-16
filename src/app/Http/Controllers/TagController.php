@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tag;
-use App\Http\Filters\TagFilter;
 use App\Http\Resources\TagResource;
 use App\Http\Requests\TagStoreRequest;
 use App\Http\Requests\TagUpdateRequest;
@@ -13,12 +12,11 @@ class TagController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param TagFilter  $filters
      * @return \Illuminate\Http\Resources\Json\ResourceCollection
      */
-    public function index(TagFilter $filters)
+    public function index()
     {
-        $tags = Tag::filter($filters)->paginate();
+        $tags = Tag::paginate();
 
         return TagResource::collection($tags);
     }
@@ -76,6 +74,7 @@ class TagController extends Controller
     public function destroy(Tag $tag)
     {
         $tag->advertisements()->detach();
+        $tag->delete();
 
         return response([], 204);
     }
