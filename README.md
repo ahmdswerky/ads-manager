@@ -19,31 +19,37 @@ A simple Ad-Manager API with Laravel managed with Docker.
   docker-compose build
 ```
 
-02.Install dependencies
+02.Spin up containers with multiple nginx instances (change 5 to control servers number)
+
+```bash
+  docker-compose up -d --scale nginx=5
+```
+
+03.Install dependencies
 
 ```bash
   docker-compose run --rm composer install
 ```
 
-03.Copy .env file
+04.Copy .env file
 
 ```bash
   docker-compose run --rm php php -r "file_exists('/var/www/html/.env') ?: copy('/var/www/html/.env.example', '/var/www/html/.env');"
 ```
 
-04.Generate Key
+05.Generate Key
 
 ```bash
   docker-compose run --rm artisan key:generate
 ```
 
-05.Clear cache
+06.Clear cache
 
 ```bash
   docker-compose run --rm artisan cache:clear
 ```
 
-06.Run database migrations with seeders
+07.Run database migrations with seeders
 
 ```bash
   docker-compose run --rm artisan migrate --seed
@@ -54,7 +60,7 @@ A simple Ad-Manager API with Laravel managed with Docker.
 Spin up containers with multiple nginx instances (change 5 to control servers number)
 
 ```bash
-  docker-compose up --scale nginx=5
+  docker-compose up -d --scale nginx=5
 ```
 
 Spin down docker containers
