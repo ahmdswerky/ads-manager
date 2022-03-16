@@ -37,7 +37,13 @@ A simple Ad-Manager API with Laravel managed with Docker.
   docker-compose run --rm artisan key:generate
 ```
 
-05.Run database migrations with seeders
+05.Clear cache
+
+```bash
+  docker-compose run --rm artisan cache:clear
+```
+
+06.Run database migrations with seeders
 
 ```bash
   docker-compose run --rm artisan migrate --seed
