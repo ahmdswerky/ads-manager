@@ -11,99 +11,32 @@ services:
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
-    #container_name: nginx
     ports:
       - 6000-6050:80
     volumes:
-      #- ./test:/var/www/html/test1:delegated
-      #- ./src/storage:/var/www/html/storage:delegated
       - ./src:/var/www/html:delegated
-      #- ./logs/app:/var/www/html/storage/logs:delegated
-      #- ./logs/nginx:/var/log/nginx:delegated
     depends_on:
       - php
       - redis
       - mysql
       - mailhog
       - fluentd
-    #links:
-    #  - fluentd
-    #logging:
-    #  driver: "fluentd"
-    #  options:
-    #    fluentd-address: localhost:9880
-    #    tag: "{{.Name}}"
-    #    mode: non-blocking
-    #    max-buffer-size: 2m
     networks:
       - laravel
 
   fluentd:
-    container_name: fluentd
-    #build:
-    #  context: .
-    
     image: fluent/fluentd
     volumes:
-      #- /var/lib/docker/containers:/fluentd/log/containers # Example: Reading docker logs
-      #- ./logs/app:/fluentd/log/files #Example: Reading logs from a file
-      - ./src/storage/logs:/fluentd/log/files #Example: Reading logs from a file
+      - ./src/storage/logs:/fluentd/log/files
       - ./dockerfiles/fluentd/conf:/fluentd/etc
-      #- ./logs/nginx:/var/logs/nginx
-      - ./logs:/output/ # Example: Fluentd will collect logs and store it here for demo
-    #links:
-    #  - "elasticsearch"
+      - ./logs:/output
     ports:
       - 9880:9880
     logging:
       driver: "local"
 
-  #fluentd:
-  #  build:
-  #    context: ./dockerfiles
-  #    dockerfile: fluentd.dockerfile
-  #  container_name: fluentd
-  #  logging:
-  #    driver: "local"
-  #  volumes:
-  #    - ./dockerfiles/fluentd/conf:/fluentd/etc
-  #    #- ./logs/:/var/logs/nginx/
-  #    - ./logs/:/output/
-  #  #links:
-  #  #  - "elasticsearch"
-  #  ports:
-  #    - 9880:9880
-  #    #- 9880:9880/udp
-  #    #- 24224:24224
-  #    #- 24224:24224/udp
-
-  #elasticsearch:
-  #  image: docker.elastic.co/elasticsearch/elasticsearch:7.13.1
-  #  #container_name: elasticsearch
-  #  ports:
-  #     - 9200:9200
-  #  environment:
-  #    ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-  #    ELASTIC_PASSWORD: "secret"
-  #    http.cors.enabled: "true"
-  #    http.cors.allow-origin: "*"
-  #    xpack.security.enabled: "true"
-  #    discovery.type: "single-node"
-
-  #kibana:
-  #  #container_name: kibana
-  #  image: docker.elastic.co/kibana/kibana:7.13.1
-  #  links:
-  #    - "elasticsearch"
-  #  environment:
-  #    - ELASTICSEARCH_USERNAME=elastic
-  #    - ELASTICSEARCH_PASSWORD=secret
-  #  ports:
-  #    - "5601:5601"
-
   mysql:
     image: mysql:8.0
-    #container_name: mysql
     restart: always
     tty: true
     ports:
@@ -127,7 +60,6 @@ services:
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
-    #container_name: php
     volumes:
       - ./src:/var/www/html:delegated
     networks:
@@ -135,7 +67,6 @@ services:
 
   redis:
     image: redis:alpine
-    #container_name: redis
     restart: unless-stopped
     ports:
       - 6379:6379
@@ -155,7 +86,6 @@ services:
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
-    #container_name: artisan
     volumes:
       - ./src:/var/www/html
     depends_on:
@@ -172,7 +102,6 @@ services:
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
-    #container_name: composer
     volumes:
       - ./src:/var/www/html
     working_dir: /var/www/html
@@ -190,7 +119,6 @@ services:
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
-    #container_name: artisan
     volumes:
       - ./src:/var/www/html:delegated
     depends_on:
@@ -202,7 +130,6 @@ services:
 
   mailhog:
     image: mailhog/mailhog:latest
-    #container_name: mailhog
     ports:
       - 1025:1025
       - 8025:8025
@@ -216,7 +143,6 @@ services:
       args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
-    #container_name: cron
     volumes:
       - ./src:/var/www/html:delegated
     networks:
