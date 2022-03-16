@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
-use App\Enum\AdvertisementType;
 use App\Traits\Filterable;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
+use App\Enum\AdvertisementType;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Advertisement extends Model
 {
@@ -62,5 +64,12 @@ class Advertisement extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class)->using(AdvertisementTag::class);
+    }
+
+    protected function excerpt(): Attribute
+    {
+        return new Attribute(
+            get: fn () => Str::limit($this->description, 150, '...'),
+        );
     }
 }
