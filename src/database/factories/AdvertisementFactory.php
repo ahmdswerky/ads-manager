@@ -27,7 +27,7 @@ class AdvertisementFactory extends Factory
                 AdvertisementType::PAID,
             ]),
             'user_id' => User::inRandomOrder()->select(['id'])->first()->id,
-            'start_date' => $this->faker->dateTimeBetween('-10 days', '+10 days'),
+            'start_date' => $this->faker->dateTimeBetween('-3 days', '+3 days'),
         ];
     }
 }
