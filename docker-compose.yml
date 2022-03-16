@@ -139,6 +139,29 @@ services:
     restart: unless-stopped
     ports:
       - 6379:6379
+    volumes:
+      - ./redis:/data
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      retries: 3
+      timeout: 5s
+    networks:
+      - laravel
+
+  queue:
+    build:
+      context: ./dockerfiles
+      dockerfile: queue.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    #container_name: artisan
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - mysql
+    working_dir: /var/www/html
+    entrypoint: ['php', '/var/www/html/artisan', 'queue:work']
     networks:
       - laravel
 
@@ -183,5 +206,18 @@ services:
     ports:
       - 1025:1025
       - 8025:8025
+    networks:
+      - laravel
+
+  cron:
+    build:
+      context: dockerfiles
+      dockerfile: cron.dockerfile
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    #container_name: cron
+    volumes:
+      - ./src:/var/www/html:delegated
     networks:
       - laravel
