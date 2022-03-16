@@ -30,7 +30,7 @@ class MaxWords implements Rule
     public function passes($attribute, $value)
     {
         $this->attribute = $attribute;
-        $words = explode(" ", $value);
+        $words = explode(" ", trim($value));
 
         return count($words) <= $this->maxLength;
     }
